@@ -1,0 +1,57 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	scroll-snap-type: y mandatory;
+}
+:root {
+	--gris: #222831;
+}
+
+/*Esenciales*/
+a {
+	text-decoration: none;
+}
+h1 {
+	color: #eee;
+	font-family: "Poppins", sans-serif;
+	margin: 0 auto;
+	font-size: 4rem;
+}
+
+/*Body*/
+
+body {
+	background-color: #222831;
+}
+/*Header*/
+
+header {
+	background-color: #00adb5;
+}
+.barra {
+	padding: 1.5rem 0;
+	margin: 0 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+}
+.navegacion a {
+	color: #eee;
+	font-size: 1.8rem;
+	margin-right: 0.5rem;
+}
+a.contacto {
+	margin-right: 4rem;
+}
+.navegacion a:last-child {
+	margin-right: 0;
+}
+.navegacion a:hover {
+	color: tomato;
+}

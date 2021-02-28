@@ -1,6 +1,6 @@
 html {
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 62.5%;
 }
 *,
 *:before,
@@ -65,38 +65,41 @@ html {
 /*Esenciales*/
 
 h1 {
-	font-family: "Poppins";
 	color: #fff;
 	font-size: 65px;
 }
 h2 {
-	font-family: "Poppins";
 	font-size: 42px;
 	font-weight: 300;
 	margin-bottom: 32px;
 	color: #fff;
 }
 h3 {
-	font-family: "Poppins";
 	text-align: center;
-	font-size: 56px;
+	font-size: 4rem;
 	margin-bottom: 10px;
 	font-weight: 400;
 	color: #00adb5;
 }
-
+h4 {
+	color: #00adb5;
+	font-size: 5rem;
+	margin: 0;
+}
+h5 {
+	color: #00adb5;
+	font-size: 2.5rem;
+	font-weight: 300;
+}
 /*Body*/
-
 body {
+	font-family: "Poppins";
 }
 .contenedor {
-	width: 90%;
-	max-width: 1000px;
-	margin: auto;
-	overflow: hidden;
-	padding: 52px 0;
+	max-width: 120rem;
+	width: 95%;
+	margin: 0 auto;
 }
-
 .contenido {
 	padding: 60px 0;
 	width: 90%;
@@ -125,7 +128,6 @@ header .textos {
 }
 
 header .boton {
-	display: inline-block;
 	padding: 6px;
 	width: 128px;
 	border: 1px solid #fff;
@@ -141,9 +143,14 @@ header .boton {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	border-width: 0 0 35vh 100vw;
+	border-width: 0 0 15vh 100vw;
 	border-style: solid;
 	border-color: transparent transparent #fff transparent;
+}
+@media (min-width: 768px) {
+	.sesgoabajo {
+		border-width: 0 0 2 5vh 100vw;
+	}
 }
 .navegacion {
 	padding: 0 5px;
@@ -163,90 +170,83 @@ header .boton {
 }
 
 /*Areas*/
-
+.tarjetas {
+	display: grid;
+}
+.tarjeta {
+	margin: 2rem 0;
+	padding: 2rem;
+	justify-content: center;
+	text-align: center;
+	box-shadow: 0rem 0rem 0.7rem 0 var(--gris);
+	border-radius: 1rem;
+}
+.tarjeta img {
+	height: 10rem;
+}
+.tarjeta p {
+	color: #222831;
+	font-size: 1.5rem;
+}
 .slogan {
 	font-size: 24px;
 	font-weight: 300;
 	text-align: center;
 	margin-bottom: 24px;
 }
-.cards {
-	width: 100%;
-	margin: auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+@media (min-width: 768px) {
+	.tarjetas {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 2rem;
+	}
 }
 
-.card {
-	margin: 20px 0;
-	width: 30%;
-	height: 250px;
+@media (min-width: 992px) {
+	.tarjetas {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2rem;
+	}
+}
+/*Nosotros*/
+
+.nosotros {
+	display: grid;
 	text-align: center;
-	padding: 20px;
-	box-shadow: 0px 0px 4px 0 rgba(52, 73, 94, 0.849);
 }
-
-/* Sobre nosotros*/
-.tarjetas {
-	display: flex;
-	justify-content: space-evenly;
+.nosotros img {
+	max-width: 20rem;
 }
-
-.tarjeta {
-	background: #00adb5;
-	display: flex;
-	width: 46%;
-	height: 200px;
-	align-items: center;
-	justify-content: space-evenly;
-	border-radius: 5px;
-	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+.persona {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 2rem;
 }
-
-.tarjeta img {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	display: block;
+.persona p {
+	margin: 0 auto;
 }
-
-.tarjeta > .contenido-texto-tarjeta {
-	width: 60%;
+.mision {
+	margin: 0 0 1.5rem 0;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: #00adb5;
+}
+.mision p {
+	margin: 0 auto;
+	font-size: 1.6rem;
 	color: #fff;
 }
-
-.tarjeta > .contenido-texto-tarjeta p {
-	font-weight: 300;
-	padding-top: 5px;
+.texto p {
+	font-size: 2rem;
 }
-
-.hover {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	transform: scale(0);
-	background: hsla(273, 91%, 27%, 0.7);
-	transition: transform 0.5s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+@media (min-width: 768px) {
+	.nosotros {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
-
-.hover img {
-	width: 50px;
-}
-
-.hover p {
-	color: #fff;
-}
-
-.imagen-port:hover .hover {
-	transform: scale(1);
+/*Mapa*/
+.mapa {
+	height: 42rem;
+	background-color: green;
 }
 /* Footer */
 
